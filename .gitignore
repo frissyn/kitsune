@@ -1,0 +1,17 @@
+# PYTHON FILES
+# ------------
+dist/
+build/
+*.egg.info/
+__pycahce__/
+
+# ENVIRON FILES
+# ------------
+.env
+env/
+venv/
+
+# POETRY FILES
+# ------------
+poetry.lock     linguist-vendored
+pyproject.toml  linguist-vendored
