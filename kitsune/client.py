@@ -9,7 +9,13 @@ req.headers.update(HEADERS)
 
 
 class Client(object):
-    fetch = req
+    def __init__(self, *args, **kwargs):
+        pass
 
-    def __init__(self, KEY):
+    @classmethod
+    def new(cls, *args, **kwargs):
+        pass    
+
+    @classmethod
+    def authenticate(cls, username=None, password=None):
         pass
