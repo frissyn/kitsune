@@ -1,18 +1,20 @@
 import setuptools
 
+from kitsune import __version__
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="kitsune.py",
-    version="0.0.1a",
+    version=__version__,
     author="frissyn",
     author_email="author@example.com",
     description="A simple and extensible Python API wrapper for Kitsu.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/frissyn/kitsune",
-    packages=["reflux"],
+    packages=["kitsune"],
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
