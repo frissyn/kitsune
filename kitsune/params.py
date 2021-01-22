@@ -3,9 +3,7 @@ def with_includes(*args) -> dict:
 
 
 def with_fields(name: str, *args) -> dict:
-    value = ",".join(args)
-
-    return {f"fields[{name}]": value}
+    return {f"fields[{name}]": ",".join(args)}
 
 
 def with_filter(**kws) -> dict:
@@ -19,12 +17,4 @@ def with_filter(**kws) -> dict:
 
 
 def with_sorting(*args) -> dict:
-    value = ""
-
-    for a in args:
-        value += f"-{a}"
-
-        if not a == args[-1]:
-            value += ","
-    
-    return {"sort": value}
+    return {"sort": ",".join([f"-{a}" for a in args])}
