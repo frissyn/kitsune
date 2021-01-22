@@ -13,15 +13,11 @@ class Client(object):
     def __init__(self, session: requests.Session, token: dict):
         self.token = token
         self.session = session
-        
-        try:
-            self.auth_string = token["access_token"]
-        except KeyError:
-            self.auth_string = None
+        self.auth_string = token["access_token"]
 
     @classmethod
     def new(cls):
-        return cls(req)
+        return cls(req, {"access_token": None})
 
     @classmethod
     def authenticate(cls, username: str, password: str):
