@@ -1,8 +1,8 @@
-def with_includes(*args) -> dict:
+def with_includes(args: tuple) -> dict:
     return {"includes": ",".join(args)}
 
 
-def with_fields(name: str, *args) -> dict:
+def with_fields(name: str, args: tuple) -> dict:
     return {f"fields[{name}]": ",".join(args)}
 
 
@@ -16,5 +16,5 @@ def with_filter(**kws) -> dict:
         return {f"filter[{name}]": value}
 
 
-def with_sorting(*args) -> dict:
+def with_sorting(args: tuple) -> dict:
     return {"sort": ",".join([f"-{a}" for a in args])}
