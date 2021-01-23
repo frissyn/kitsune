@@ -13,5 +13,5 @@ venv/
 
 # POETRY FILES
 # ------------
-poetry.lock     linguist-vendored
-pyproject.toml  linguist-vendored
+poetry.lock     linguist-generated
+pyproject.toml  linguist-generated
