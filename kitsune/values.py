@@ -7,7 +7,7 @@ HEADERS = {
 }
 
 ENDPOINTS = {
-    "ouath": "oauth/token"
+    "oauth": "oauth/token"
 }
 
 def url(endpoint: str):
