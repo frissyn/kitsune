@@ -10,5 +10,5 @@ ENDPOINTS = {
     "oauth": "oauth/token"
 }
 
-def url(endpoint: str):
+def url(endpoint: str) -> str:
     return BASE_URL + ENDPOINTS[endpoint]

@@ -1,3 +1,4 @@
+import json
 import requests
 
 from .values import url
@@ -11,7 +12,7 @@ def get_token(username: str, password: str) -> dict:
     }
 
     headers = {"Content-Type": "application/json"}
-    r = requests.post(url("oauth"), data=data, headers=headers)
+    r = requests.post(url("oauth"), json=json.dumps(data), headers=headers)
 
     r.raise_for_status()
     return r.json()
@@ -24,7 +25,7 @@ def refresh_token(token: str) -> dict:
     }
 
     headers = {"Content-Type": "application/json"}
-    r = requests.post(url("oauth"), data=data, headers=headers)
+    r = requests.post(url("oauth"), json=json.dumps(data), headers=headers)
 
     r.raise_for_status()
     return r.json()
