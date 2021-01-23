@@ -3,7 +3,7 @@
 dist/
 build/
 *.egg.info/
-__pycahce__/
+__pycache__/
 
 # ENVIRON FILES
 # ------------
