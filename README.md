@@ -8,7 +8,7 @@ Kitsune is a simple and extensible Python API wrapper for the Kitsu Anime/Manga 
 - Categories
 - Characters
 
-Kitsune will be for getting information directly related manga and anime. The "social media" (so to speak) portion of Kistu will be ignored as much as possible, only being referenced when absoultely necessary. Objects that link to Kistu users, posts, etc. will be ommited.
+Kitsune will be for getting information directly related manga and anime. The "social media" (so to speak) portion of Kistu will be ignored as much as possible, only being referenced when absoultely necessary. Objects that link to Kistu users, posts, etc. will be ommited if possible.
 
 # Overview
 
@@ -22,7 +22,7 @@ Kitsune will be for getting information directly related manga and anime. The "s
 
 ### Usage
 
-**Again, this is a work in progress, consider these implementation notes.**
+**Again, this is a work in progress, consider these code snippets implementation notes.**
 
 Without authentication:
 ```python
@@ -51,8 +51,7 @@ collection = client.get_category("Comedy")
    - `cd kitsune`
 
 2. Make your changes
-3. Run tests from with the bin script:
+3. Run tests from within the bin script:
 
    - `bash bin/test.sh`
    - Make sure all tests pass!
-
