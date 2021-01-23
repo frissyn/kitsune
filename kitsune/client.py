@@ -23,8 +23,6 @@ class Client(object):
     def authenticate(cls, username: str, password: str):
         token = get_token(username, password)
 
-        req.headers.update({
-            "Authorization": f"Bearer {token['access_token']}"
-        })
+        req.headers.update({"Authorization": f"Bearer {token['access_token']}"})
 
         return cls(req, token)

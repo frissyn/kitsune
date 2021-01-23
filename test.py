@@ -15,7 +15,7 @@ class TestClient(unittest.TestCase):
         test = requests.Session
 
         self.assertIsInstance(res, test)
-    
+
     def test_client_token(self):
         res = Client.new().auth_string
         test = None
@@ -29,13 +29,13 @@ class TestUtilities(unittest.TestCase):
         test = {"filter[categories]": "adventure"}
 
         self.assertEqual(res, test)
-    
+
     def test_with_fields(self):
         res = with_fields("users", ["name", "createdAt"])
         test = {"fields[users]": "name,createdAt"}
 
         self.assertEqual(res, test)
-    
+
     def test_with_includes(self):
         res = with_includes(["categories", "mediaRelationships.destination"])
         test = {"includes": "categories,mediaRelationships.destination"}
@@ -47,6 +47,7 @@ class TestUtilities(unittest.TestCase):
         test = {"sort": "-followersCount,-followingCount"}
 
         self.assertEqual(res, test)
+
 
 if __name__ == "__main__":
     unittest.main()

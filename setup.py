@@ -22,5 +22,5 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "Development Status :: 2 - Pre-Alpha",
     ],
-    python_requires='>=3.6',
+    python_requires=">=3.6",
 )

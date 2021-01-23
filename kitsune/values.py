@@ -6,9 +6,8 @@ HEADERS = {
     "Content-Type": "application/vnd.api+json",
 }
 
-ENDPOINTS = {
-    "oauth": "oauth/token"
-}
+ENDPOINTS = {"oauth": "oauth/token"}
+
 
 def url(endpoint: str) -> str:
     return BASE_URL + ENDPOINTS[endpoint]
