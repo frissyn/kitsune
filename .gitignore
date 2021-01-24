@@ -7,6 +7,7 @@ __pycache__/
 
 # ENVIRON FILES
 # ------------
+main.py
 .env
 env/
 venv/
