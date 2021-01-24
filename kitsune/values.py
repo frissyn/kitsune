@@ -1,3 +1,5 @@
+def URL(endpoint: str) -> str: return BASE_URL + ENDPOINTS[endpoint]
+
 BASE_URL = "https://" + "kitsu.io/api/"
 
 HEADERS = {
@@ -36,7 +38,3 @@ ENDPOINTS = {
     "manga_character_collection": "edge/manga-characters",
     "manga_character_resource": "edge/manga-characters/{id}"
 }
-
-
-def url(endpoint: str) -> str:
-    return BASE_URL + ENDPOINTS[endpoint]
