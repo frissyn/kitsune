@@ -55,3 +55,7 @@ collection = client.get_category("Comedy")
 
    - `bash bin/test.sh`
    - Make sure all tests pass!
+
+### Other Notes
+
+This repository uses labeled commits that follow my prefix guide. When contributing, please adhere to that guide: [github.com/frissyn/commit-prefixes](https://github.com/frissyn/commit-prefixes)
