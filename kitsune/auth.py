@@ -1,10 +1,16 @@
 import requests
 
+from urllib.parse import quote
+
 from .values import URL
 
 
 def get_token(username: str, password: str) -> dict:
-    data = {"email": username, "password": password, "grant_type": "password"}
+    data = {
+        "email": quote(username),
+        "password": quote(password),
+        "grant_type": "password"
+    }
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
 
     r = requests.post(URL("oauth"), data=data, headers=headers)
